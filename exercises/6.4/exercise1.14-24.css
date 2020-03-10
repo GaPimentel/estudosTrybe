@@ -1,0 +1,110 @@
+/*
+14
+#pond {
+  exibição: flex;
+}
+
+.amarelo {
+  order: 2;
+}
+*/
+
+/*
+15
+#pond {
+  exibição: flex;
+}
+
+.red {
+  order: -2
+}
+*/
+
+/*
+16
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+  align-self: flex-end;
+}
+*/
+
+/*
+17
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+  order: 1;
+  align-self: flex-end;
+}
+*/
+
+/*
+18
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+}
+*/
+
+/*
+19
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+*/
+
+/*
+20
+#pond {
+  display: flex;
+  flex-flow: column wrap;
+}
+*/
+
+/*
+21
+#pond {
+  exibição: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+*/
+
+/*
+22
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+*/
+
+/*
+23
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-content: center;
+}
+*/
+
+/*
+24
+#pond {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  lex-wrap: wrap-reverse;
+  flex-direction: column-reverse;
+}
+*/
