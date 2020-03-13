@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testes de aulas</title>
+  <style>
+    .texto-teste {
+      overflow: hidden;
+    }
+
+    p {
+      animation-duration: 3s;
+      animation-name: slidein;
+      animation-iteration-count:initial;
+      animation-direction: alternate;
+    }
+
+    .slidein {
+      -moz-animation-duration: 3s;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      -moz-animation-name: slidein;
+      -webkit-animation-name: slidein;
+      animation-name: slidein;
+      -moz-animation-iteration-count: 3;
+      -webkit-animation-iteration-count: 3;
+      animation-iteration-count: 3;
+      -moz-animation-direction: alternate;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+    }
+    
+    @-moz-keyframes slidein {
+      from {
+        margin-left:100%;
+        width:300%
+      }
+          
+      to {
+        margin-left:0%;
+        width:100%;
+      }
+
+      75% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+      }
+    }
+
+    @-webkit-keyframes slidein {
+      from {
+        margin-left:100%;
+        width:300%
+      }
+      
+      to {
+        margin-left:0%;
+        width:100%;
+      }
+
+      75% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+      }
+    }
+
+    @keyframes slidein {
+      from {
+        margin-left:100%;
+        width:300%
+      }
+      
+      to {
+        margin-left:0%;
+        width:100%;
+      }
+
+      75% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="texto-teste">
+    <p>Texto para teste aqui</p>
+  </section>
+</body>
+</html>
