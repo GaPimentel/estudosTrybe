@@ -1,94 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testes de aulas</title>
-  <style>
-    .texto-teste {
-      overflow: hidden;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de aulas</title>
+    <style>
+      .texto-teste {
+        overflow: hidden;
+      }
 
-    p {
-      animation-duration: 3s;
-      animation-name: slidein;
-      animation-iteration-count:initial;
-      animation-direction: alternate;
-    }
+      h1 {
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count:initial;
+        animation-direction: alternate;
+      }
 
-    .slidein {
-      -moz-animation-duration: 3s;
-      -webkit-animation-duration: 3s;
-      animation-duration: 3s;
-      -moz-animation-name: slidein;
-      -webkit-animation-name: slidein;
-      animation-name: slidein;
-      -moz-animation-iteration-count: 3;
-      -webkit-animation-iteration-count: 3;
-      animation-iteration-count: 3;
-      -moz-animation-direction: alternate;
-      -webkit-animation-direction: alternate;
-      animation-direction: alternate;
-    }
+      .slidein {
+        -moz-animation-duration: 3s;
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+        -moz-animation-name: slidein;
+        -webkit-animation-name: slidein;
+        animation-name: slidein;
+        -moz-animation-iteration-count: 3;
+        -webkit-animation-iteration-count: 3;
+        animation-iteration-count: 3;
+        -moz-animation-direction: alternate;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+      }
+      
+      @-moz-keyframes slidein {
+        from {
+          margin-left:100%;
+          width:300%
+        }
+            
+        to {
+          margin-left:0%;
+          width:100%;
+        }
+
+        75% {
+          font-size: 300%;
+          margin-left: 25%;
+          width: 150%;
+        }
+      }
+
+      @-webkit-keyframes slidein {
+        from {
+          margin-left:100%;
+          width:300%
+        }
+        
+        to {
+          margin-left:0%;
+          width:100%;
+        }
+
+        75% {
+          font-size: 300%;
+          margin-left: 25%;
+          width: 150%;
+        }
+      }
+
+      @keyframes slidein {
+        from {
+          margin-left:100%;
+          width:300%
+        }
+        
+        to {
+          margin-left:0%;
+          width:100%;
+        }
+
+        75% {
+          font-size: 300%;
+          margin-left: 25%;
+          width: 150%;
+        }
+      }
+    </style>
     
-    @-moz-keyframes slidein {
-      from {
-        margin-left:100%;
-        width:300%
-      }
-          
-      to {
-        margin-left:0%;
-        width:100%;
-      }
+  </head>
 
-      75% {
-        font-size: 300%;
-        margin-left: 25%;
-        width: 150%;
-      }
-    }
+  <body>
+    <h1 id="veja-mover">Veja-me mover</h1>
 
-    @-webkit-keyframes slidein {
-      from {
-        margin-left:100%;
-        width:300%
-      }
-      
-      to {
-        margin-left:0%;
-        width:100%;
-      }
+    <ul id="output">
+    </ul>
 
-      75% {
-        font-size: 300%;
-        margin-left: 25%;
-        width: 150%;
-      }
-    }
+    <script>
+      var e = document.getElementById("veja-mover");
+      e.addEventListener("animationstart", listener, false);
+      e.addEventListener("animationend", listener, false);
+      e.addEventListener("animationiteration", listener, false);
 
-    @keyframes slidein {
-      from {
-        margin-left:100%;
-        width:300%
-      }
-      
-      to {
-        margin-left:0%;
-        width:100%;
-      }
+      e.className = "slidein";
 
-      75% {
-        font-size: 300%;
-        margin-left: 25%;
-        width: 150%;
+      function listener(e) {
+        var l = document.createElement("li");
+        switch(e.type) {
+          case "animationstart":
+            l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
+            break;
+          case "animationend":
+            l.innerHTML = "Ended: elapsed time is " + e.elapsedTime;
+            break;
+          case "animationiteration":
+            l.innerHTML = "New loop started at time " + e.elapsedTime;
+            break;
+        }
+        document.getElementById("output").appendChild(l);
       }
-    }
-  </style>
-</head>
-<body>
-  <section class="texto-teste">
-    <p>Texto para teste aqui</p>
-  </section>
-</body>
+    </script>
+
+  </body>
+
 </html>
