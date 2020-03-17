@@ -1,0 +1,77 @@
+.box-images {
+  /*para o verso e as imagens criadas*/
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 780px;
+}
+
+.box-card {
+  display: flex;
+  max-width: 100%;
+}
+
+.box-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px;
+  max-width: 100%;
+}
+
+.carta {
+  max-width: 100px;
+  margin-left: 15px;
+}
+
+.cards {
+  max-width: 100px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-duration: 1s;
+}
+.translate-up {
+  animation-name: translate-up;
+  animation-duration: 2s;
+}
+.scale-up {
+  animation-name: scale-up;
+  animation-duration: 2s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+    transition-timing-function: ease-out;
+  }
+  100% {
+    position: initial;
+  }
+}
+
+@keyframes translate-up {
+  0% {
+    transform: translateY(-60px);
+    transition-timing-function: ease-out;
+  }
+  100% {
+    position: initial;
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1.5);
+    transition-timing-function: ease-out;
+  }
+  100% {
+    position: initial;
+  }
+}
